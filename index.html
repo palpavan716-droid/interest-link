@@ -1,149 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DineFlowBook Event Request</title>
+<label>Guest Name *</label>
+<input type="text" placeholder="Enter your full name" required>
 
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
+<label>Mobile Number *</label>
+<input type="tel" placeholder="+91 9876543210" required>
 
-body{
-background:#f4f6f9;
-padding:30px 15px;
-}
+<label>Email Address</label>
+<input type="email" placeholder="guest@example.com">
 
-.container{
-max-width:800px;
-margin:auto;
-background:#fff;
-padding:30px;
-border-radius:15px;
-box-shadow:0 5px 20px rgba(0,0,0,0.1);
-}
+<label>City</label>
+<input type="text" placeholder="Enter your city">
 
-.logo{
-text-align:center;
-font-size:32px;
-font-weight:bold;
-color:#0d6efd;
-margin-bottom:10px;
-}
-
-h1{
-text-align:center;
-margin-bottom:10px;
-}
-
-.subtitle{
-text-align:center;
-color:#666;
-margin-bottom:25px;
-}
-
-label{
-display:block;
-margin-bottom:8px;
-font-weight:600;
-}
-
-input,select,textarea{
-width:100%;
-padding:12px;
-border:1px solid #ddd;
-border-radius:8px;
-margin-bottom:18px;
-font-size:15px;
-}
-
-textarea{
-resize:vertical;
-}
-
-button{
-width:100%;
-background:#0d6efd;
-color:white;
-border:none;
-padding:14px;
-font-size:16px;
-font-weight:bold;
-border-radius:8px;
-cursor:pointer;
-}
-
-button:hover{
-background:#0b5ed7;
-}
-
-.footer{
-text-align:center;
-margin-top:20px;
-font-size:13px;
-color:#777;
-}
-</style>
-</head>
-
-<body>
-
-<div class="container">
-
-<div class="logo">DineFlowBook</div>
-
-<h1>Tell Us What You're Planning</h1>
-
-<p class="subtitle">
-Hi Mr./Ms. Guest, please fill out the details below so we can assist you better.
-</p>
-
-<form>
-
-<label>I'm Interested In *</label>
+<label>Preferred Contact Method</label>
 <select>
-<option>Family Lunch</option>
-<option>Family Dinner</option>
-<option>Birthday Celebration</option>
-<option>Anniversary Celebration</option>
-<option>Corporate Lunch</option>
-<option>Corporate Dinner</option>
-<option>Kitty Party</option>
-<option>Wedding Function</option>
-<option>Engagement Ceremony</option>
-<option>Reception</option>
-<option>Private Dining Room</option>
-<option>Buffet Experience</option>
-<option>Catering Service</option>
-<option>Conference / Meeting</option>
-<option>Other</option>
-</select>
+<option>Phone Call</option>
+<option>WhatsApp</option>
+<option>Email</option>
+</select><select required>
+<option value="">Select Event Type</option>
+<option>🎂 Birthday Celebration</option>
+<option>💍 Anniversary Celebration</option>
+<option>👨‍👩‍👧 Family Lunch</option>
+<option>🍽️ Family Dinner</option>
+<option>🏢 Corporate Lunch</option>
+<option>🏢 Corporate Dinner</option>
+<option>💒 Wedding Function</option>
+<option>💍 Engagement Ceremony</option>
+<option>🎉 Reception</option>
+<option>🎤 Conference / Meeting</option>
+<option>🍱 Catering Service</option>
+<option>🥂 Private Dining Room</option>
+<option>🎊 Other</option>
+</select><label>Estimated Budget</label>
+<select>
+<option>Select Budget Range</option>
+<option>₹10,000 - ₹25,000</option>
+<option>₹25,000 - ₹50,000</option>
+<option>₹50,000 - ₹1,00,000</option>
+<option>₹1,00,000 - ₹2,50,000</option>
+<option>₹2,50,000+</option>
+</select><button type="submit">
+✨ Request Event Proposal
+</button><div style="background:linear-gradient(135deg,#2563eb,#1e40af);
+padding:25px;
+border-radius:15px;
+color:white;
+text-align:center;
+margin-bottom:25px;">
 
-<label>Preferred Event Date</label>
-<input type="date">
+<h2>🎉 Plan Your Perfect Event</h2>
+<p>Birthdays • Weddings • Corporate Events • Catering</p>
 
-<label>Expected Guests (PAX)</label>
-<input type="number" placeholder="e.g. 50">
-
-<label>Budget Range</label>
-<input type="text" placeholder="e.g. ₹25,000 - ₹50,000">
-
-<label>Special Requirements / Notes</label>
-<textarea rows="5" placeholder="Tell us more about your ideas, dietary restrictions, or specific needs..."></textarea>
-
-<button type="submit">Submit Request</button>
-
-</form>
-
-<div class="footer">
-Powered by DineFlowBook
+</div><div class="footer">
+🍽️ DineFlowBook Event Management Platform<br>
+Making Event Planning Simple & Professional
 </div>
-
-</div>
-
-</body>
-</html>
