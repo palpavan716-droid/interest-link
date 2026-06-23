@@ -1,17 +1,110 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Event Request Form</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DineFlowBook Event Request</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#f4f6f9;
+padding:30px 15px;
+}
+
+.container{
+max-width:800px;
+margin:auto;
+background:#fff;
+padding:30px;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+.logo{
+text-align:center;
+font-size:32px;
+font-weight:bold;
+color:#0d6efd;
+margin-bottom:10px;
+}
+
+h1{
+text-align:center;
+margin-bottom:10px;
+}
+
+.subtitle{
+text-align:center;
+color:#666;
+margin-bottom:25px;
+}
+
+label{
+display:block;
+margin-bottom:8px;
+font-weight:600;
+}
+
+input,select,textarea{
+width:100%;
+padding:12px;
+border:1px solid #ddd;
+border-radius:8px;
+margin-bottom:18px;
+font-size:15px;
+}
+
+textarea{
+resize:vertical;
+}
+
+button{
+width:100%;
+background:#0d6efd;
+color:white;
+border:none;
+padding:14px;
+font-size:16px;
+font-weight:bold;
+border-radius:8px;
+cursor:pointer;
+}
+
+button:hover{
+background:#0b5ed7;
+}
+
+.footer{
+text-align:center;
+margin-top:20px;
+font-size:13px;
+color:#777;
+}
+</style>
 </head>
+
 <body>
+
+<div class="container">
+
+<div class="logo">DineFlowBook</div>
+
 <h1>Tell Us What You're Planning</h1>
 
-<form>
-<label>Name:</label><br>
-<input type="text" placeholder="Mr. XX"><br><br>
+<p class="subtitle">
+Hi Mr./Ms. Guest, please fill out the details below so we can assist you better.
+</p>
 
-<label>I'm Interested In:</label><br>
+<form>
+
+<label>I'm Interested In *</label>
 <select>
 <option>Family Lunch</option>
 <option>Family Dinner</option>
@@ -19,29 +112,38 @@
 <option>Anniversary Celebration</option>
 <option>Corporate Lunch</option>
 <option>Corporate Dinner</option>
+<option>Kitty Party</option>
 <option>Wedding Function</option>
 <option>Engagement Ceremony</option>
 <option>Reception</option>
 <option>Private Dining Room</option>
+<option>Buffet Experience</option>
 <option>Catering Service</option>
 <option>Conference / Meeting</option>
 <option>Other</option>
-</select><br><br>
+</select>
 
-<label>Preferred Event Date:</label><br>
-<input type="date"><br><br>
+<label>Preferred Event Date</label>
+<input type="date">
 
-<label>Expected Guests (PAX):</label><br>
-<input type="number"><br><br>
+<label>Expected Guests (PAX)</label>
+<input type="number" placeholder="e.g. 50">
 
-<label>Budget Range:</label><br>
-<input type="text"><br><br>
+<label>Budget Range</label>
+<input type="text" placeholder="e.g. ₹25,000 - ₹50,000">
 
-<label>Special Requirements:</label><br>
-<textarea rows="5"></textarea><br><br>
+<label>Special Requirements / Notes</label>
+<textarea rows="5" placeholder="Tell us more about your ideas, dietary restrictions, or specific needs..."></textarea>
 
 <button type="submit">Submit Request</button>
+
 </form>
+
+<div class="footer">
+Powered by DineFlowBook
+</div>
+
+</div>
 
 </body>
 </html>
