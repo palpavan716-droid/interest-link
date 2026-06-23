@@ -1,76 +1,116 @@
-body{
-background:linear-gradient(135deg,#0f172a,#1e293b);
-padding:30px 15px;
+<div class="container">
+
+<div class="logo">🍽️ DineFlowBook</div>
+
+<h1>Plan Your Perfect Event</h1>
+
+<p class="subtitle">
+Share your event requirements and our team will contact you with a personalized proposal.
+</p>
+
+<form>
+
+<label>Guest Name *</label>
+<input type="text" placeholder="Enter Full Name" required>
+
+<label>Mobile Number *</label>
+<input type="tel" placeholder="+91 9876543210" required>
+
+<label>Email Address</label>
+<input type="email" placeholder="guest@example.com">
+
+<label>Event Type *</label>
+<select required>
+<option value="">Select Event Type</option>
+<option>Birthday Celebration</option>
+<option>Anniversary Celebration</option>
+<option>Family Lunch</option>
+<option>Family Dinner</option>
+<option>Corporate Lunch</option>
+<option>Corporate Dinner</option>
+<option>Wedding Function</option>
+<option>Engagement Ceremony</option>
+<option>Reception</option>
+<option>Conference / Meeting</option>
+<option>Catering Service</option>
+<option>Private Dining Room</option>
+<option>Other</option>
+</select>
+
+<label>Event Date *</label>
+<input type="date" required>
+
+<label>Preferred Time</label>
+<input type="time">
+
+<label>Expected Guests (PAX)</label>
+<input type="number" placeholder="50">
+
+<label>Budget Range</label>
+<select>
+<option>Select Budget</option>
+<option>₹10,000 - ₹25,000</option>
+<option>₹25,000 - ₹50,000</option>
+<option>₹50,000 - ₹1,00,000</option>
+<option>₹1,00,000+</option>
+</select>
+
+<label>Special Requirements</label>
+<textarea rows="5" placeholder="Decoration, dietary requirements, theme, seating arrangement etc."></textarea>
+
+<button type="submit">
+✨ Request Proposal
+</button>
+
+</form>
+
+<div class="footer">
+Powered by DineFlowBook | Event Management Platform
+</div>
+
+</div>body{
+background:linear-gradient(135deg,#0f172a,#1e293b,#334155);
 min-height:100vh;
-}.container{
+padding:40px 15px;
+}
+
+.container{
 max-width:850px;
 margin:auto;
 background:#ffffff;
-padding:35px;
-border-radius:20px;
-box-shadow:0 15px 40px rgba(0,0,0,0.25);
-animation:fadeIn 0.6s ease;
-}@keyframes fadeIn{
-from{
-opacity:0;
-transform:translateY(20px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
+padding:40px;
+border-radius:24px;
+box-shadow:0 20px 50px rgba(0,0,0,.25);
 }
 
 .logo{
 text-align:center;
-font-size:38px;
-font-weight:700;
+font-size:42px;
+font-weight:800;
 color:#2563eb;
-margin-bottom:10px;
-}
-
-.badge{
-background:#dbeafe;
-color:#1d4ed8;
-padding:8px 15px;
-border-radius:50px;
-display:inline-block;
-font-size:13px;
 margin-bottom:15px;
 }
 
-input:focus,
-select:focus,
-textarea:focus{
-outline:none;
-border-color:#2563eb;
-box-shadow:0 0 0 3px rgba(37,99,235,0.15);
+h1{
+text-align:center;
+font-size:34px;
+margin-bottom:10px;
+}
+
+.subtitle{
+text-align:center;
+color:#64748b;
+margin-bottom:30px;
 }
 
 button{
-width:100%;
 background:linear-gradient(135deg,#2563eb,#1d4ed8);
-color:white;
+padding:16px;
+border-radius:12px;
+font-size:17px;
+font-weight:700;
 border:none;
-padding:15px;
-font-size:16px;
-font-weight:bold;
-border-radius:10px;
+color:#fff;
 cursor:pointer;
-transition:.3s;
+width:100%;
 }
-
-button:hover{
-transform:translateY(-2px);
-}<div style="text-align:center;">
-<span class="badge">Premium Event Enquiry Form</span>
-</div><label>Guest Name *</label>
-<input type="text" placeholder="Enter your full name">
-
-<label>Mobile Number *</label>
-<input type="tel" placeholder="+91 9876543210">
-
-<label>Email Address</label>
-<input type="email" placeholder="guest@example.com"><button type="submit">
-🎉 Submit Event Request
-</button>
