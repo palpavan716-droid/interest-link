@@ -1,116 +1,149 @@
-<div class="container">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DineFlowBook Event Request</title>
 
-<div class="logo">🍽️ DineFlowBook</div>
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
 
-<h1>Plan Your Perfect Event</h1>
-
-<p class="subtitle">
-Share your event requirements and our team will contact you with a personalized proposal.
-</p>
-
-<form>
-
-<label>Guest Name *</label>
-<input type="text" placeholder="Enter Full Name" required>
-
-<label>Mobile Number *</label>
-<input type="tel" placeholder="+91 9876543210" required>
-
-<label>Email Address</label>
-<input type="email" placeholder="guest@example.com">
-
-<label>Event Type *</label>
-<select required>
-<option value="">Select Event Type</option>
-<option>Birthday Celebration</option>
-<option>Anniversary Celebration</option>
-<option>Family Lunch</option>
-<option>Family Dinner</option>
-<option>Corporate Lunch</option>
-<option>Corporate Dinner</option>
-<option>Wedding Function</option>
-<option>Engagement Ceremony</option>
-<option>Reception</option>
-<option>Conference / Meeting</option>
-<option>Catering Service</option>
-<option>Private Dining Room</option>
-<option>Other</option>
-</select>
-
-<label>Event Date *</label>
-<input type="date" required>
-
-<label>Preferred Time</label>
-<input type="time">
-
-<label>Expected Guests (PAX)</label>
-<input type="number" placeholder="50">
-
-<label>Budget Range</label>
-<select>
-<option>Select Budget</option>
-<option>₹10,000 - ₹25,000</option>
-<option>₹25,000 - ₹50,000</option>
-<option>₹50,000 - ₹1,00,000</option>
-<option>₹1,00,000+</option>
-</select>
-
-<label>Special Requirements</label>
-<textarea rows="5" placeholder="Decoration, dietary requirements, theme, seating arrangement etc."></textarea>
-
-<button type="submit">
-✨ Request Proposal
-</button>
-
-</form>
-
-<div class="footer">
-Powered by DineFlowBook | Event Management Platform
-</div>
-
-</div>body{
-background:linear-gradient(135deg,#0f172a,#1e293b,#334155);
-min-height:100vh;
-padding:40px 15px;
+body{
+background:#f4f6f9;
+padding:30px 15px;
 }
 
 .container{
-max-width:850px;
+max-width:800px;
 margin:auto;
-background:#ffffff;
-padding:40px;
-border-radius:24px;
-box-shadow:0 20px 50px rgba(0,0,0,.25);
+background:#fff;
+padding:30px;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
 }
 
 .logo{
 text-align:center;
-font-size:42px;
-font-weight:800;
-color:#2563eb;
-margin-bottom:15px;
+font-size:32px;
+font-weight:bold;
+color:#0d6efd;
+margin-bottom:10px;
 }
 
 h1{
 text-align:center;
-font-size:34px;
 margin-bottom:10px;
 }
 
 .subtitle{
 text-align:center;
-color:#64748b;
-margin-bottom:30px;
+color:#666;
+margin-bottom:25px;
+}
+
+label{
+display:block;
+margin-bottom:8px;
+font-weight:600;
+}
+
+input,select,textarea{
+width:100%;
+padding:12px;
+border:1px solid #ddd;
+border-radius:8px;
+margin-bottom:18px;
+font-size:15px;
+}
+
+textarea{
+resize:vertical;
 }
 
 button{
-background:linear-gradient(135deg,#2563eb,#1d4ed8);
-padding:16px;
-border-radius:12px;
-font-size:17px;
-font-weight:700;
-border:none;
-color:#fff;
-cursor:pointer;
 width:100%;
+background:#0d6efd;
+color:white;
+border:none;
+padding:14px;
+font-size:16px;
+font-weight:bold;
+border-radius:8px;
+cursor:pointer;
 }
+
+button:hover{
+background:#0b5ed7;
+}
+
+.footer{
+text-align:center;
+margin-top:20px;
+font-size:13px;
+color:#777;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="logo">DineFlowBook</div>
+
+<h1>Tell Us What You're Planning</h1>
+
+<p class="subtitle">
+Hi Mr./Ms. Guest, please fill out the details below so we can assist you better.
+</p>
+
+<form>
+
+<label>I'm Interested In *</label>
+<select>
+<option>Family Lunch</option>
+<option>Family Dinner</option>
+<option>Birthday Celebration</option>
+<option>Anniversary Celebration</option>
+<option>Corporate Lunch</option>
+<option>Corporate Dinner</option>
+<option>Kitty Party</option>
+<option>Wedding Function</option>
+<option>Engagement Ceremony</option>
+<option>Reception</option>
+<option>Private Dining Room</option>
+<option>Buffet Experience</option>
+<option>Catering Service</option>
+<option>Conference / Meeting</option>
+<option>Other</option>
+</select>
+
+<label>Preferred Event Date</label>
+<input type="date">
+
+<label>Expected Guests (PAX)</label>
+<input type="number" placeholder="e.g. 50">
+
+<label>Budget Range</label>
+<input type="text" placeholder="e.g. ₹25,000 - ₹50,000">
+
+<label>Special Requirements / Notes</label>
+<textarea rows="5" placeholder="Tell us more about your ideas, dietary restrictions, or specific needs..."></textarea>
+
+<button type="submit">Submit Request</button>
+
+</form>
+
+<div class="footer">
+Powered by DineFlowBook
+</div>
+
+</div>
+
+</body>
+</html>
