@@ -1,51 +1,163 @@
-<div class="container">
+<div class="lead-form-container">
+  <div class="lead-form-card">
+    <h1>Tell Us What You're Planning</h1>
+    <p>
+      Hi Mr./Ms. Guest, please fill out the details below so we can assist you better.
+    </p>
 
-<h1>Tell Us What You're Planning</h1>
+    <form>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>I'm Interested In *</label>
+          <select>
+            <option>Select Event Type</option>
+            <option>Family Lunch</option>
+            <option>Birthday Celebration</option>
+            <option>Corporate Dinner</option>
+            <option>Wedding Function</option>
+          </select>
+        </div>
 
-<p class="subtitle">
-Hi Mr./Ms. Guest, please fill out the details below so we can assist you better.
-</p>
+        <div class="form-group">
+          <label>Preferred Event Date *</label>
+          <input type="date">
+        </div>
 
-<form>
+        <div class="form-group">
+          <label>Expected Guests (PAX)</label>
+          <input type="number" placeholder="50">
+        </div>
 
-<label>I'm Interested In *</label>
+        <div class="form-group">
+          <label>Budget Range</label>
+          <input type="text" placeholder="₹25,000 - ₹50,000">
+        </div>
 
-<select required>
-<option value="">Select Event Type</option>
-<option>Family Lunch</option>
-<option>Family Dinner</option>
-<option>Birthday Celebration</option>
-<option>Anniversary Celebration</option>
-<option>Corporate Lunch</option>
-<option>Corporate Dinner</option>
-<option>Kitty Party</option>
-<option>Wedding Function</option>
-<option>Engagement Ceremony</option>
-<option>Reception</option>
-<option>Private Dining Room</option>
-<option>Buffet Experience</option>
-<option>Catering Service</option>
-<option>Conference / Meeting</option>
-<option>Other</option>
-</select>
+        <div class="form-group full-width">
+          <label>Special Requirements</label>
+          <textarea rows="4"
+            placeholder="Tell us about dietary preferences, seating arrangements, decorations, etc."></textarea>
+        </div>
 
-<label>Preferred Event Date</label>
-<input type="date">
+        <div class="form-group">
+          <label>Guest Name *</label>
+          <input type="text" placeholder="Your Full Name">
+        </div>
 
-<label>Expected Guests (PAX)</label>
-<input type="number" placeholder="e.g. 50">
+        <div class="form-group">
+          <label>Mobile Number *</label>
+          <input type="tel" placeholder="+91 9876543210">
+        </div>
 
-<label>Budget Range</label>
-<input type="text" placeholder="e.g. ₹25,000 - ₹50,000">
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" placeholder="guest@example.com">
+        </div>
+      </div>
 
-<label>Special Requirements / Notes</label>
+      <button type="submit" class="submit-btn">
+        Submit Request
+      </button>
+    </form>
+  </div>
+</div>*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI',sans-serif;
+}
 
-<textarea rows="5" placeholder="Tell us more about your ideas, dietary restrictions, or specific needs..."></textarea>
+body{
+  background:#f5f7fb;
+  padding:20px;
+}
 
-<button type="submit">
-Submit Request
-</button>
+.lead-form-container{
+  max-width:1000px;
+  margin:auto;
+}
 
-</form>
+.lead-form-card{
+  background:#fff;
+  padding:40px;
+  border-radius:20px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
 
-</div>
+.lead-form-card h1{
+  font-size:32px;
+  color:#222;
+  margin-bottom:10px;
+}
+
+.lead-form-card p{
+  color:#666;
+  margin-bottom:30px;
+}
+
+.form-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:20px;
+}
+
+.form-group{
+  display:flex;
+  flex-direction:column;
+}
+
+.form-group label{
+  margin-bottom:8px;
+  font-weight:600;
+  color:#333;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+  padding:14px;
+  border:1px solid #ddd;
+  border-radius:10px;
+  font-size:15px;
+  transition:.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+  border-color:#2563eb;
+  outline:none;
+  box-shadow:0 0 0 4px rgba(37,99,235,.1);
+}
+
+.full-width{
+  grid-column:1/-1;
+}
+
+.submit-btn{
+  margin-top:25px;
+  background:#2563eb;
+  color:white;
+  border:none;
+  padding:15px 30px;
+  border-radius:12px;
+  font-size:16px;
+  font-weight:600;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.submit-btn:hover{
+  background:#1d4ed8;
+  transform:translateY(-2px);
+}
+
+@media(max-width:768px){
+  .lead-form-card{
+    padding:20px;
+  }
+
+  .lead-form-card h1{
+    font-size:24px;
+  }
+}
