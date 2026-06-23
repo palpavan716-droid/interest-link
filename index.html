@@ -1,149 +1,76 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DineFlowBook Event Request</title>
-
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
-
 body{
-background:#f4f6f9;
+background:linear-gradient(135deg,#0f172a,#1e293b);
 padding:30px 15px;
-}
-
-.container{
-max-width:800px;
+min-height:100vh;
+}.container{
+max-width:850px;
 margin:auto;
-background:#fff;
-padding:30px;
-border-radius:15px;
-box-shadow:0 5px 20px rgba(0,0,0,0.1);
+background:#ffffff;
+padding:35px;
+border-radius:20px;
+box-shadow:0 15px 40px rgba(0,0,0,0.25);
+animation:fadeIn 0.6s ease;
+}@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
 
 .logo{
 text-align:center;
-font-size:32px;
-font-weight:bold;
-color:#0d6efd;
+font-size:38px;
+font-weight:700;
+color:#2563eb;
 margin-bottom:10px;
 }
 
-h1{
-text-align:center;
-margin-bottom:10px;
+.badge{
+background:#dbeafe;
+color:#1d4ed8;
+padding:8px 15px;
+border-radius:50px;
+display:inline-block;
+font-size:13px;
+margin-bottom:15px;
 }
 
-.subtitle{
-text-align:center;
-color:#666;
-margin-bottom:25px;
-}
-
-label{
-display:block;
-margin-bottom:8px;
-font-weight:600;
-}
-
-input,select,textarea{
-width:100%;
-padding:12px;
-border:1px solid #ddd;
-border-radius:8px;
-margin-bottom:18px;
-font-size:15px;
-}
-
-textarea{
-resize:vertical;
+input:focus,
+select:focus,
+textarea:focus{
+outline:none;
+border-color:#2563eb;
+box-shadow:0 0 0 3px rgba(37,99,235,0.15);
 }
 
 button{
 width:100%;
-background:#0d6efd;
+background:linear-gradient(135deg,#2563eb,#1d4ed8);
 color:white;
 border:none;
-padding:14px;
+padding:15px;
 font-size:16px;
 font-weight:bold;
-border-radius:8px;
+border-radius:10px;
 cursor:pointer;
+transition:.3s;
 }
 
 button:hover{
-background:#0b5ed7;
-}
+transform:translateY(-2px);
+}<div style="text-align:center;">
+<span class="badge">Premium Event Enquiry Form</span>
+</div><label>Guest Name *</label>
+<input type="text" placeholder="Enter your full name">
 
-.footer{
-text-align:center;
-margin-top:20px;
-font-size:13px;
-color:#777;
-}
-</style>
-</head>
+<label>Mobile Number *</label>
+<input type="tel" placeholder="+91 9876543210">
 
-<body>
-
-<div class="container">
-
-<div class="logo">DineFlowBook</div>
-
-<h1>Tell Us What You're Planning</h1>
-
-<p class="subtitle">
-Hi Mr./Ms. Guest, please fill out the details below so we can assist you better.
-</p>
-
-<form>
-
-<label>I'm Interested In *</label>
-<select>
-<option>Family Lunch</option>
-<option>Family Dinner</option>
-<option>Birthday Celebration</option>
-<option>Anniversary Celebration</option>
-<option>Corporate Lunch</option>
-<option>Corporate Dinner</option>
-<option>Kitty Party</option>
-<option>Wedding Function</option>
-<option>Engagement Ceremony</option>
-<option>Reception</option>
-<option>Private Dining Room</option>
-<option>Buffet Experience</option>
-<option>Catering Service</option>
-<option>Conference / Meeting</option>
-<option>Other</option>
-</select>
-
-<label>Preferred Event Date</label>
-<input type="date">
-
-<label>Expected Guests (PAX)</label>
-<input type="number" placeholder="e.g. 50">
-
-<label>Budget Range</label>
-<input type="text" placeholder="e.g. ₹25,000 - ₹50,000">
-
-<label>Special Requirements / Notes</label>
-<textarea rows="5" placeholder="Tell us more about your ideas, dietary restrictions, or specific needs..."></textarea>
-
-<button type="submit">Submit Request</button>
-
-</form>
-
-<div class="footer">
-Powered by DineFlowBook
-</div>
-
-</div>
-
-</body>
-</html>
+<label>Email Address</label>
+<input type="email" placeholder="guest@example.com"><button type="submit">
+🎉 Submit Event Request
+</button>
