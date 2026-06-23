@@ -1,47 +1,58 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Event Request Form</title>
-</head>
-<body>
+<div class="container">
+
 <h1>Tell Us What You're Planning</h1>
 
-<form>
-<label>Name:</label><br>
-<input type="text" placeholder="Mr. XX"><br><br>
+<p class="subtitle">
+Hi Mr./Ms. Guest, please fill out the details below so we can assist you better.
+</p>
 
-<label>I'm Interested In:</label><br>
-<select>
+<form>
+
+<label>I'm Interested In *</label>
+
+<select required>
+<option value="">Select Event Type</option>
 <option>Family Lunch</option>
 <option>Family Dinner</option>
 <option>Birthday Celebration</option>
 <option>Anniversary Celebration</option>
 <option>Corporate Lunch</option>
 <option>Corporate Dinner</option>
+<option>Kitty Party</option>
 <option>Wedding Function</option>
 <option>Engagement Ceremony</option>
 <option>Reception</option>
 <option>Private Dining Room</option>
+<option>Buffet Experience</option>
 <option>Catering Service</option>
 <option>Conference / Meeting</option>
 <option>Other</option>
-</select><br><br>
+</select>
 
-<label>Preferred Event Date:</label><br>
-<input type="date"><br><br>
+<label>Preferred Event Date</label>
+<input type="date">
 
-<label>Expected Guests (PAX):</label><br>
-<input type="number"><br><br>
+<label>Expected Guests (PAX)</label>
+<input type="number" placeholder="e.g. 50">
 
-<label>Budget Range:</label><br>
-<input type="text"><br><br>
+<label>Budget Range</label>
+<input type="text" placeholder="e.g. ₹25,000 - ₹50,000">
 
-<label>Special Requirements:</label><br>
-<textarea rows="5"></textarea><br><br>
+<label>Special Requirements / Notes</label>
 
-<button type="submit">Submit Request</button>
+<textarea rows="5" placeholder="Tell us more about your ideas, dietary restrictions, or specific needs..."></textarea>
+
+<button type="submit">
+Submit Request
+</button>
+
 </form>
 
-</body>
-</html>
+</div><label>Guest Name *</label>
+<input type="text" placeholder="Enter your full name">
+
+<label>Mobile Number *</label>
+<input type="tel" placeholder="+91 9876543210">
+
+<label>Email Address</label>
+<input type="email" placeholder="guest@example.com">
