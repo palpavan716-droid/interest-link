@@ -18,29 +18,30 @@ font-family:'Poppins',sans-serif;
 body{
 background:linear-gradient(135deg,#0f172a,#1e293b,#334155);
 min-height:100vh;
+padding:20px;
 display:flex;
 justify-content:center;
 align-items:center;
-padding:20px;
 }
 
 .container{
 width:100%;
-max-width:700px;
-background:#fff;
+max-width:750px;
+background:#ffffff;
 border-radius:25px;
 padding:35px;
-box-shadow:0 20px 50px rgba(0,0,0,0.25);
+box-shadow:0 25px 60px rgba(0,0,0,0.25);
 }
 
 .logo{
 text-align:center;
-margin-bottom:15px;
+margin-bottom:20px;
 }
 
 .logo h1{
+font-size:36px;
 color:#0f172a;
-font-size:32px;
+font-weight:700;
 }
 
 .logo p{
@@ -48,31 +49,60 @@ color:#64748b;
 margin-top:5px;
 }
 
-.form-title{
-text-align:center;
+.badge{
+display:inline-block;
+background:#dbeafe;
+color:#2563eb;
+padding:8px 18px;
+border-radius:50px;
+font-size:14px;
+font-weight:600;
+margin-bottom:10px;
+}
+
+.welcome-box{
+background:#f8fafc;
+padding:22px;
+border-radius:18px;
+border-left:5px solid #2563eb;
 margin-bottom:25px;
 }
 
-.form-title h2{
-color:#111827;
-margin-bottom:8px;
+.welcome-box h2{
+color:#0f172a;
+margin-bottom:10px;
 }
 
-.form-title p{
-color:#6b7280;
+.welcome-box p{
+color:#475569;
+line-height:1.8;
+}
+
+.form-title{
+margin-bottom:20px;
+text-align:center;
+}
+
+.form-title h3{
+color:#111827;
+}
+
+.form-group{
+margin-bottom:16px;
 }
 
 label{
 display:block;
-margin-top:15px;
+margin-bottom:8px;
 font-weight:600;
 color:#1f2937;
 }
 
-input,select,textarea{
+input,
+select,
+textarea{
 width:100%;
 padding:14px;
-margin-top:8px;
 border:1px solid #d1d5db;
 border-radius:12px;
 font-size:15px;
@@ -87,11 +117,10 @@ border-color:#2563eb;
 
 .submit-btn{
 width:100%;
-margin-top:25px;
 background:#2563eb;
 color:white;
 border:none;
-padding:15px;
+padding:16px;
 font-size:16px;
 font-weight:600;
 border-radius:12px;
@@ -101,7 +130,6 @@ transition:.3s;
 
 .submit-btn:hover{
 background:#1d4ed8;
-transform:translateY(-2px);
 }
 
 .footer{
@@ -109,16 +137,6 @@ text-align:center;
 margin-top:20px;
 font-size:13px;
 color:#6b7280;
-}
-
-.badge{
-background:#dbeafe;
-color:#1d4ed8;
-padding:6px 12px;
-border-radius:30px;
-display:inline-block;
-font-size:13px;
-margin-bottom:10px;
 }
 </style>
 </head>
@@ -129,23 +147,43 @@ margin-bottom:10px;
 
 <div class="logo">
 <div class="badge">DineFlowBook</div>
-<h1>Send Interest</h1>
-<p>Tell us what you're planning</p>
+<h1>Tell Us What You're Planning</h1>
+<p>Dining • Events • Celebrations</p>
+</div>
+
+<div class="welcome-box">
+<h2>Welcome Guest</h2>
+
+<p>
+Thank you for choosing DineFlowBook.
+</p>
+
+<p>
+We're delighted to assist with your dining and event plans. Kindly share the details below and our team will connect with you shortly.
+</p>
+
+<p>
+Whether it's a Family Dinner, Birthday Celebration, Anniversary, Corporate Event, Wedding Function or any special occasion, we're here to make it memorable.
+</p>
 </div>
 
 <div class="form-title">
-<h2>Event Inquiry Form</h2>
-<p>Please fill out the details below</p>
+<h3>Event Inquiry Form</h3>
 </div>
 
 <form id="interestForm">
 
+<div class="form-group">
 <label>Guest Name *</label>
 <input type="text" id="name" required>
+</div>
 
+<div class="form-group">
 <label>Mobile Number *</label>
 <input type="tel" id="phone" required>
+</div>
 
+<div class="form-group">
 <label>I'm Interested In *</label>
 <select id="event">
 <option>Family Lunch</option>
@@ -154,6 +192,7 @@ margin-bottom:10px;
 <option>Anniversary Celebration</option>
 <option>Corporate Lunch</option>
 <option>Corporate Dinner</option>
+<option>Kitty Party</option>
 <option>Wedding Function</option>
 <option>Engagement Ceremony</option>
 <option>Reception</option>
@@ -163,15 +202,22 @@ margin-bottom:10px;
 <option>Conference / Meeting</option>
 <option>Other</option>
 </select>
+</div>
 
+<div class="form-group">
 <label>Preferred Event Date *</label>
-<input type="date" id="date">
+<input type="date" id="date" required>
+</div>
 
+<div class="form-group">
 <label>Expected Guests (PAX)</label>
-<input type="number" id="pax">
+<input type="number" id="pax" placeholder="Example: 25">
+</div>
 
+<div class="form-group">
 <label>Special Requirements</label>
-<textarea rows="4" id="remarks"></textarea>
+<textarea id="remarks" rows="4" placeholder="Any special request?"></textarea>
+</div>
 
 <button type="submit" class="submit-btn">
 Send Interest
@@ -186,29 +232,28 @@ Powered by DineFlowBook
 </div>
 
 <script>
-document.getElementById("interestForm")
-.addEventListener("submit", function(e){
+document.getElementById("interestForm").addEventListener("submit", function(e){
 
 e.preventDefault();
 
-let name=document.getElementById("name").value;
-let phone=document.getElementById("phone").value;
-let event=document.getElementById("event").value;
-let date=document.getElementById("date").value;
-let pax=document.getElementById("pax").value;
-let remarks=document.getElementById("remarks").value;
+let name = document.getElementById("name").value;
+let phone = document.getElementById("phone").value;
+let eventType = document.getElementById("event").value;
+let date = document.getElementById("date").value;
+let pax = document.getElementById("pax").value;
+let remarks = document.getElementById("remarks").value;
 
-let msg=
-`*NEW INTEREST LEAD*%0A%0A`+
-`Name: ${name}%0A`+
-`Phone: ${phone}%0A`+
-`Event: ${event}%0A`+
-`Date: ${date}%0A`+
-`Guests: ${pax}%0A`+
-`Remarks: ${remarks}`;
+let message =
+`*NEW DINEFLOWBOOK LEAD*%0A%0A` +
+`👤 Guest Name: ${name}%0A` +
+`📞 Mobile: ${phone}%0A` +
+`🎉 Event: ${eventType}%0A` +
+`📅 Date: ${date}%0A` +
+`👥 Guests: ${pax}%0A` +
+`📝 Requirements: ${remarks}`;
 
 window.open(
-`https://wa.me/9002884401?text=${msg}`,
+`https://wa.me/919002884401?text=${message}`,
 '_blank'
 );
 
